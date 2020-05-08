@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <video autoplay muted id="myVideo">
+        <source src="{{video}}" type="video/{{extension}}">
+    </video>
+</body>
+
+<style>
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+</style>
+<script>
+    video = document.getElementById('myVideo');
+    video.addEventListener('ended',function() {
+        window.location.href = '{{next}}';
+    })
+</script>
+</html>
+

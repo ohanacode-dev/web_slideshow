@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <img id="my_img" src="{{image}}" alt="image">
+</body>
+
+<style>
+#my_img {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+</style>
+<script>
+    setTimeout(function(){
+        window.location.href = '{{next}}';
+    }, 5000);
+
+</script>
+</html>
+
