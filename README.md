@@ -1,6 +1,6 @@
 # Web Slide Show
 
-I wrote this for a clients waiting room to just display various content on a monitor. There is one folder where you just drop all content you wish displayed. This can be images and videos for now, but the app is easilly extensible to display any file type.
+I wrote this for a clients waiting room to just display various content on a monitor. There is one folder where you just drop all content you wish displayed. This can be images and videos for now, but the app is easilly extensible to display any file type. You can also drop a '*txt' file and each line of text will be cycled as messages overlaying the images and videos. 
 
 The files are sorted and played in alphabetic order.
 

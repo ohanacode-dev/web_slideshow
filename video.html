@@ -6,6 +6,10 @@
     <video autoplay muted id="myVideo">
         <source src="{{video}}" type="video/{{extension}}">
     </video>
+
+    <div class="msg_container">
+        <p id="message">{{message}}</p>
+    </div>
 </body>
 
 <style>
@@ -15,6 +19,25 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+}
+
+.msg_container{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  background-color: black;
+  color: orange;
+  opacity: 0.8;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+#message{
+    word-wrap: break-word;
+    margin: 3px 6px;
+    padding: 0;
 }
 
 </style>
