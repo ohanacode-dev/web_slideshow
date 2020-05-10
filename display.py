@@ -127,17 +127,22 @@ def profile(page):
 
 @app.route('/slides/<file>')
 def slides(file):
-    list_files()
-
     file_piece = file.split('----')
     if len(file_piece) > 1:
         file = file_piece[1]
 
-    if file in files:
-        try:
-            file_path = os.path.join(SLIDES_PATH, file)
-            return flask.send_file(file_path, attachment_filename=file)
-        except Exception as e:
-            return str(e)
+    try:
+        file_path = os.path.join(SLIDES_PATH, file)
+        return flask.send_file(file_path, attachment_filename=file)
+    except Exception as e:
+        return str(e)
 
-app.run()
+
+@app.route('/pwroff')
+def pwroff():
+    os.system('shutdown -h now')
+    return 'OK'
+
+
+if __name__ == '__main__':
+    app.run('0.0.0.0', 8888, threaded=True)
