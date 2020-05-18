@@ -4,6 +4,7 @@
 </head>
 <body>
     <img id="my_img" src="{{image}}" alt="">
+    <img id="next_img" src="" alt="">
     <div class="msg_container">
         <p id="message">{{message}}</p>
     </div>
@@ -16,6 +17,8 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  height: 100%
+  width: auto;
 }
 
 .msg_container{
@@ -35,6 +38,10 @@
     word-wrap: break-word;
     margin: 3px 6px;
     padding: 0;
+}
+
+#next_img{
+    visibility: hidden;
 }
 
 </style>

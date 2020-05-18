@@ -122,7 +122,7 @@ def profile(page):
         return get_response_for(page)
     else:
         print('No file: {} in files: {}'.format(page, files))
-        flask.abort(404)
+        return get_response_for(files[0])
 
 
 @app.route('/slides/<file>')
@@ -141,7 +141,13 @@ def slides(file):
 @app.route('/pwroff')
 def pwroff():
     os.system('shutdown -h now')
-    return 'OK'
+    return 'Shutting down...'
+
+
+@app.route('/reboot')
+def reboot():
+    os.system('reboot')
+    return 'Rebootnig...'
 
 
 if __name__ == '__main__':
