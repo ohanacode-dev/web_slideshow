@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 </head>
-<body>
-    <img id="my_img" src="{{image}}" alt="">
+<body onload="preloadNext()">
     <img id="next_img" src="" alt="">
     <div class="msg_container">
         <p id="message">{{message}}</p>
@@ -11,27 +10,31 @@
 </body>
 
 <style>
+body {
+  background-image: url("{{image}}");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #my_img {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  height: 100%
-  width: auto;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
 }
 
 .msg_container{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  min-width: 100%;
-  background-color: black;
-  color: orange;
-  opacity: 0.8;
-  font-size: 40px;
-  margin: 0;
-  padding: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    background-color: black;
+    color: orange;
+    opacity: 0.8;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 #message{
@@ -50,6 +53,9 @@
         window.location.href = '{{next}}';
     }, 5000);
 
+    function preloadNext(){
+        document.getElementById("next_img").src = "{{next}}"
+    }
 </script>
 </html>
 
