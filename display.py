@@ -69,8 +69,8 @@ def get_response_for(filename):
     else:
         next_id = 0
 
-    filename = '{}{}{}'.format(int(time.time()), DELIMITER, filename)
-    next_file = '{}{}{}'.format(int(time.time()), DELIMITER, files[next_id])
+    filename = '{}{}{}'.format(int(time.time()/600), DELIMITER, filename)
+    next_file = '{}{}{}'.format(int(time.time()/600), DELIMITER, files[next_id])
 
     try:
         msg_id = current_id % msg_count
